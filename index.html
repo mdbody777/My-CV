@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Dina Mahmoud Ahmed | Professor of Parasitology</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        },
+                        academic: {
+                            gold: '#d97706',
+                            slate: '#0f172a',
+                            card: '#1e293b',
+                            cardLight: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #34d399 0%, #059669 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(217, 119, 6, 0.05) 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        html:not(.dark) ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #059669;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #047857;
+        }
+        /* Glassmorphism effects */
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        html:not(.dark) .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Print Optimized Styling */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; font-size: 11pt; }
+            .glass-panel, .bg-slate-800, .bg-slate-900 { background: white !important; border: none !important; box-shadow: none !important; color: black !important; }
+            .gradient-text { -webkit-text-fill-color: black !important; color: black !important; }
+            .print-break-inside-prevent { page-break-inside: avoid; }
+            .border-slate-700, .border-slate-800 { border-color: #e2e8f0 !important; }
+            .text-emerald-400, .text-emerald-500, .text-amber-400 { color: #047857 !important; }
+            .text-slate-300, .text-slate-400 { color: #334155 !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 dark:bg-slate-950 dark:text-slate-100 min-h-screen selection:bg-emerald-500 selection:text-white">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 transition-colors duration-200 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand / Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-amber-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-900/30 group-hover:scale-105 transition-transform">
+                    DM
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block text-slate-100 dark:text-slate-100">Dr. Dina M. Ahmed</span>
+                    <span class="text-xs text-emerald-500 font-medium tracking-wide block -mt-1">Professor of Parasitology</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium text-slate-300">
+                <a href="#about" class="px-3 py-2 rounded-lg hover:text-emerald-400 hover:bg-slate-800/50 transition-all">About</a>
+                <a href="#patents" class="px-3 py-2 rounded-lg hover:text-emerald-400 hover:bg-slate-800/50 transition-all">Patents</a>
+                <a href="#experience" class="px-3 py-2 rounded-lg hover:text-emerald-400 hover:bg-slate-800/50 transition-all">Experience</a>
+                <a href="#supervision" class="px-3 py-2 rounded-lg hover:text-emerald-400 hover:bg-slate-800/50 transition-all">Theses Supervision</a>
+                <a href="#publications" class="px-3 py-2 rounded-lg hover:text-emerald-400 hover:bg-slate-800/50 transition-all">Publications</a>
+                <a href="#education" class="px-3 py-2 rounded-lg hover:text-emerald-400 hover:bg-slate-800/50 transition-all">Education</a>
+            </nav>
+
+            <!-- Action Tools & Theme Toggle -->
+            <div class="flex items-center space-x-2">
+                <!-- Global Search Trigger -->
+                <button onclick="toggleGlobalSearchModal()" class="p-2 text-slate-400 hover:text-emerald-400 hover:bg-slate-800/60 rounded-xl transition-all" title="Search CV Content (Ctrl+K)">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                </button>
+                <!-- Print CV Button -->
+                <button onclick="window.print()" class="hidden sm:flex items-center space-x-2 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-lg border border-slate-700 transition-all" title="Print or Save as PDF">
+                    <i class="fa-solid fa-print text-emerald-400"></i>
+                    <span>PDF / Print</span>
+                </button>
+                <!-- Theme Toggle Button -->
+                <button id="themeToggleBtn" onclick="toggleDarkMode()" class="p-2 text-slate-400 hover:text-amber-400 hover:bg-slate-800/60 rounded-xl transition-all" title="Toggle Theme">
+                    <i class="fa-solid fa-moon text-lg" id="themeIcon"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-400 hover:text-slate-100 rounded-lg">
+                    <i class="fa-solid fa-bars text-xl" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-slate-900/95 px-4 pt-2 pb-4 space-y-1 text-sm font-medium">
+            <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-emerald-400">About</a>
+            <a href="#patents" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-emerald-400">Patents</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-emerald-400">Experience</a>
+            <a href="#supervision" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-emerald-400">Theses Supervision</a>
+            <a href="#publications" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-emerald-400">Publications</a>
+            <a href="#education" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-emerald-400">Education</a>
+            <div class="pt-2 border-t border-slate-800 flex justify-between">
+                <button onclick="window.print()" class="w-full text-center py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium text-xs flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-file-pdf"></i> Print / Export PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="relative pt-12 pb-16 lg:pt-20 lg:pb-24 overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-emerald-900/20 via-amber-900/10 to-transparent blur-3xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Details & Text -->
+                <div class="lg:col-span-8 space-y-6">
+                    <!-- Academic Badges -->
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+                            <i class="fa-solid fa-graduation-cap"></i> Professor of Parasitology
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center gap-1.5">
+                            <i class="fa-solid fa-microscope"></i> Biotechnology & Molecular Biology
+                        </span>
+                        <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center gap-1.5">
+                            <i class="fa-solid fa-robot"></i> AI in Higher Education
+                        </span>
+                    </div>
+
+                    <!-- Title & Name -->
+                    <div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-100">
+                            Dr. Dina Mahmoud <span class="gradient-text">Ahmed</span>
+                        </h1>
+                        <p class="mt-2 text-lg sm:text-xl text-slate-400 font-medium">
+                            Veterinary Parasitologist • Researcher • Academic Leader
+                        </p>
+                    </div>
+
+                    <!-- Summary Paragraph -->
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-3xl">
+                        Accomplished Professor of Parasitology with <span class="text-emerald-400 font-semibold">25 years of expertise</span> across veterinary medicine, molecular diagnostics, and biotechnology. Recognized for pioneering research in parasite diagnostics, supervising doctoral & master’s theses during <span class="text-amber-400 font-semibold">9 years at King Saud University</span>, holds multiple US Patents in bio-nanotechnology, and leads academic transformations integrating AI-driven research methodology.
+                    </p>
+
+                    <!-- Contact Bar Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2 no-print">
+                        <a href="mailto:mdbody7@yahoo.com" class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-xs text-slate-500 block">Email Address</span>
+                                <span class="text-sm font-semibold text-slate-200 truncate block group-hover:text-emerald-400">mdbody7@yahoo.com</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:+966544204679" class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-xs text-slate-500 block">Phone / WhatsApp</span>
+                                <span class="text-sm font-semibold text-slate-200 truncate block group-hover:text-emerald-400">+966 544 204 679</span>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-xs text-slate-500 block">Location</span>
+                                <span class="text-sm font-semibold text-slate-200 truncate block">Riyadh, Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- External Profiles Links -->
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="https://orcid.org" target="_blank" rel="noopener" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-2 transition-all">
+                            <i class="fa-brands fa-orcid text-emerald-500 text-sm"></i> ORCID Profile
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-2 transition-all">
+                            <i class="fa-brands fa-linkedin text-blue-500 text-sm"></i> LinkedIn Profile
+                        </a>
+                        <span class="text-slate-500 text-xs hidden sm:inline">• Languages: Arabic (Native), English (Proficient)</span>
+                    </div>
+                </div>
+
+                <!-- Right Quick Stats Card Grid -->
+                <div class="lg:col-span-4 grid grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all text-center">
+                        <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400 block mb-1">25+</span>
+                        <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">Years Experience</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-slate-800 hover:border-amber-500/40 transition-all text-center">
+                        <span class="text-3xl sm:text-4xl font-extrabold text-amber-400 block mb-1">3</span>
+                        <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">US Patents</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-slate-800 hover:border-blue-500/40 transition-all text-center">
+                        <span class="text-3xl sm:text-4xl font-extrabold text-blue-400 block mb-1">9+</span>
+                        <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">MSc & PhD Theses</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/60 border border-slate-800 hover:border-purple-500/40 transition-all text-center">
+                        <span class="text-3xl sm:text-4xl font-extrabold text-purple-400 block mb-1">9 Yrs</span>
+                        <span class="text-xs text-slate-400 font-medium uppercase tracking-wider">King Saud Univ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Skills Section -->
+    <section class="py-12 bg-slate-900/60 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-emerald-400"></i> Core Competencies & Expertise
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Specialized domains spanning clinical parasitology, molecular diagnostics, and academic leadership</p>
+                </div>
+                <!-- Interactive Filter Tabs for Skills -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0 no-print" id="skillsFilterContainer">
+                    <button onclick="filterSkills('all')" class="skill-tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white transition-all" data-category="all">All</button>
+                    <button onclick="filterSkills('research')" class="skill-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="research">Research & Diagnostics</button>
+                    <button onclick="filterSkills('teaching')" class="skill-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="teaching">Teaching & Curriculum</button>
+                    <button onclick="filterSkills('biotech')" class="skill-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all" data-category="biotech">Biotech & Nano</button>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3" id="skillsGrid">
+                <!-- Dynamically populated skills cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Patents Section -->
+    <section id="patents" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold uppercase tracking-wider">
+                    Intellectual Property
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-100 mt-3">US Registered Patents & Innovations</h2>
+                <p class="text-slate-400 text-sm mt-2">Pioneering green nanotechnology applications for bio-active antibacterial and antiparasitic solutions</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Patent 1 -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-bl-full pointer-events-none group-hover:bg-amber-500/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">US Patent 10,206,417</span>
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar-check"></i> Feb 19, 2019</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2 group-hover:text-amber-400 transition-colors">
+                            Guava Seed (Psidium guajava) Nanoparticles as an Antibacterial Agent
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Innovative green synthesis using Psidium guajava seed extract for nanoparticle formulation targeting pathogen control and antibacterial efficacy.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span>Assignee: King Saud University</span>
+                        <span class="text-amber-400 font-medium">Co-Inventor</span>
+                    </div>
+                </div>
+
+                <!-- Patent 2 -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-bl-full pointer-events-none group-hover:bg-amber-500/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Reg Patent US 32903.69</span>
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar-check"></i> Jan 28, 2020</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2 group-hover:text-amber-400 transition-colors">
+                            Methanolic Grape Seed (Vitis vinifera) Nanoparticles on Food Bacteria
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Formulation and application of methanolic grape seed extract nanoparticles targeting food pathogenic and contaminating bacterial strains.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span>US Patent Office</span>
+                        <span class="text-amber-400 font-medium">Co-Inventor</span>
+                    </div>
+                </div>
+
+                <!-- Patent 3 -->
+                <div class="glass-panel p-6 rounded-2xl relative overflow-hidden border border-slate-800 hover:border-amber-500/50 transition-all group flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-bl-full pointer-events-none group-hover:bg-amber-500/20 transition-all"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">US Patent 10,898,533</span>
+                            <span class="text-xs text-slate-400"><i class="fa-regular fa-calendar-check"></i> Jan 26, 2021</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2 group-hover:text-amber-400 transition-colors">
+                            Mangosteen Bio-Nanoparticles Development
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                            Development and bio-characterization of mangosteen-derived nanoparticle extracts with key biomedical applications against pathogen proliferation.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                        <span>Assignee: King Saud University</span>
+                        <span class="text-amber-400 font-medium">Co-Inventor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-16 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-emerald-400 font-semibold text-xs tracking-wider uppercase">Career Progression</span>
+                    <h2 class="text-3xl font-extrabold text-slate-100 mt-1">Academic Work Experience</h2>
+                </div>
+
+                <!-- Experience Filter Tabs -->
+                <div class="flex items-center gap-2 mt-4 md:mt-0 no-print" id="expFilterContainer">
+                    <button onclick="filterExperience('all')" class="exp-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white transition-all">All History</button>
+                    <button onclick="filterExperience('ksu')" class="exp-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">King Saud Univ (Saudi Arabia)</button>
+                    <button onclick="filterExperience('zagazig')" class="exp-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Zagazig Univ (Egypt)</button>
+                </div>
+            </div>
+
+            <!-- Timeline List -->
+            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-6 space-y-10" id="experienceTimeline">
+                <!-- Dynamically populated timeline items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Postgraduate Supervision Section -->
+    <section id="supervision" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-semibold uppercase tracking-wider">
+                    Academic Leadership
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-100 mt-3">Postgraduate Research Supervision</h2>
+                <p class="text-slate-400 text-sm mt-2">Guiding MSc & PhD candidates in molecular characterization, epidemiology, and natural antiparasitics</p>
+            </div>
+
+            <!-- Search and Level Filter Bar -->
+            <div class="glass-panel p-4 rounded-2xl mb-8 flex flex-col sm:flex-row gap-4 justify-between items-center no-print">
+                <div class="relative w-full sm:w-80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm"></i>
+                    <input type="text" id="thesisSearchInput" onkeyup="filterTheses()" placeholder="Search species, host, gene or title..." class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-10 pr-4 py-2 text-xs text-slate-200 focus:outline-none focus:border-emerald-500 transition-colors">
+                </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <button onclick="filterThesisLevel('all')" class="thesis-level-btn active flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white">All Theses (9)</button>
+                    <button onclick="filterThesisLevel('phd')" class="thesis-level-btn flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">PhD (1)</button>
+                    <button onclick="filterThesisLevel('msc')" class="thesis-level-btn flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Master's (8)</button>
+                </div>
+            </div>
+
+            <!-- Theses Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="thesesGrid">
+                <!-- Dynamically rendered thesis cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-slate-900/60 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-emerald-400 font-semibold text-xs tracking-wider uppercase">Scientific Contributions</span>
+                    <h2 class="text-3xl font-extrabold text-slate-100 mt-1">Key Peer-Reviewed Publications</h2>
+                </div>
+                <div class="mt-4 md:mt-0 no-print">
+                    <a href="https://orcid.org" target="_blank" rel="noopener" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-emerald-400 rounded-xl text-xs font-semibold border border-slate-700 flex items-center gap-2 transition-all">
+                        <i class="fa-brands fa-orcid"></i> View Complete Orcid Publications List
+                    </a>
+                </div>
+            </div>
+
+            <!-- Publications List -->
+            <div class="space-y-4" id="publicationsContainer">
+                <!-- Dynamically loaded publications -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Committee & Professional Development Grid -->
+    <section id="education" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Education & Degrees (5 cols) -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-emerald-400"></i> Academic Education
+                        </h2>
+                        <p class="text-slate-400 text-xs mt-1">Degrees obtained from Zagazig University, Egypt</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                            <span class="text-xs font-bold text-emerald-400">2023</span>
+                            <h3 class="text-base font-bold text-slate-100">Diploma in Biochemistry</h3>
+                            <p class="text-xs text-slate-400">Biochemistry Department, Faculty of Veterinary Medicine, Zagazig University</p>
+                        </div>
+
+                        <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                            <span class="text-xs font-bold text-emerald-400">2008</span>
+                            <h3 class="text-base font-bold text-slate-100">Doctor of Philosophy (Ph.D.) in Parasitology</h3>
+                            <p class="text-xs text-slate-400">Department of Parasitology, Faculty of Veterinary Medicine, Zagazig University</p>
+                        </div>
+
+                        <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                            <span class="text-xs font-bold text-emerald-400">2003</span>
+                            <h3 class="text-base font-bold text-slate-100">Master of Science (M.Sc.) in Parasitology</h3>
+                            <p class="text-xs text-slate-400">Department of Parasitology, Faculty of Veterinary Medicine, Zagazig University</p>
+                        </div>
+
+                        <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                            <span class="text-xs font-bold text-emerald-400">1999</span>
+                            <h3 class="text-base font-bold text-slate-100">Bachelor of Science (B.Sc.) in Veterinary Medicine</h3>
+                            <p class="text-xs text-slate-400">Faculty of Veterinary Medicine, Zagazig University</p>
+                        </div>
+                    </div>
+
+                    <!-- Society Memberships -->
+                    <div class="pt-4">
+                        <h3 class="text-lg font-bold text-slate-100 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-users-rectangle text-amber-400"></i> Professional Scientific Societies
+                        </h3>
+                        <ul class="space-y-2 text-xs text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Member, General Syndicate of Veterinarians</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Member, Veterinarians' Syndicate, Al-Sharkia Province, Egypt</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Member, Egyptian Veterinary Medical Association for Parasitology, Suez Canal University (No. 250, 1999)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Committees & Training (7 cols) -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Committees at KSU -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
+                            <i class="fa-solid fa-sitemap text-amber-400"></i> Administrative & Committee Leadership
+                        </h2>
+                        <p class="text-slate-400 text-xs mt-1">Key leadership roles at King Saud University (2017 - 2021)</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="committeesGrid">
+                        <!-- Dynamically populated committees -->
+                    </div>
+
+                    <!-- Training Programs & Digital Development -->
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+                                <i class="fa-solid fa-laptop-code text-blue-400"></i> Professional Development & Training
+                            </h3>
+                            <div class="flex gap-2 text-xs no-print">
+                                <button onclick="toggleTrainingView('ksu')" id="btnTrainKsu" class="px-2.5 py-1 rounded bg-emerald-600 text-white font-medium">KSU Courses</button>
+                                <button onclick="toggleTrainingView('zagazig')" id="btnTrainZag" class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium">Zagazig Courses</button>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel p-5 rounded-2xl border border-slate-800" id="trainingContainer">
+                            <!-- Training items list dynamically updated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-xs text-slate-500 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="font-bold text-slate-300 text-sm">Dr. Dina Mahmoud Ahmed</span>
+                <p class="mt-1">Professor of Parasitology • Veterinary Medicine & Molecular Biology</p>
+            </div>
+
+            <div class="flex items-center space-x-4 text-slate-400">
+                <a href="#about" class="hover:text-emerald-400 transition-colors">Top</a>
+                <span>•</span>
+                <a href="mailto:mdbody7@yahoo.com" class="hover:text-emerald-400 transition-colors">Contact</a>
+                <span>•</span>
+                <button onclick="window.print()" class="hover:text-emerald-400 transition-colors">Print CV</button>
+            </div>
+
+            <div class="text-right">
+                <p>© 2026 Dr. Dina M. Ahmed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Search Modal -->
+    <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-start justify-center pt-20 px-4 no-print">
+        <div class="glass-panel w-full max-w-2xl rounded-2xl border border-slate-700 shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-3 w-full">
+                    <i class="fa-solid fa-magnifying-glass text-emerald-400 text-lg"></i>
+                    <input type="text" id="globalSearchInput" onkeyup="handleGlobalSearch()" placeholder="Search anything in CV (Patents, Species, Courses, Universities)..." class="w-full bg-transparent text-slate-100 placeholder-slate-500 text-sm focus:outline-none">
+                </div>
+                <button onclick="toggleGlobalSearchModal()" class="text-slate-400 hover:text-slate-200 px-2">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="max-h-96 overflow-y-auto p-4 space-y-2 text-xs" id="searchResultsContainer">
+                <p class="text-slate-500 text-center py-8">Start typing to search across research topics, publications, patents and career history...</p>
+            </div>
+            <div class="p-3 bg-slate-900/80 border-t border-slate-800/80 text-[11px] text-slate-500 flex justify-between">
+                <span>Press <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700 font-mono">ESC</kbd> to close</span>
+                <span>CV Search Engine</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-emerald-600 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 transition-transform transform translate-y-20 opacity-0 pointer-events-none">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg" class="text-xs font-semibold">Citation copied to clipboard!</span>
+    </div>
+
+    <script>
+        // Core Data Objects
+        const skillsData = [
+            { name: "Veterinary Parasitology", category: "research" },
+            { name: "Molecular Biology & Diagnostics", category: "research" },
+            { name: "Research Methodology", category: "research" },
+            { name: "Postgraduate Supervision", category: "teaching" },
+            { name: "Advanced Parasitology Teaching", category: "teaching" },
+            { name: "Curriculum Development", category: "teaching" },
+            { name: "Scientific Publishing", category: "research" },
+            { name: "Experimental Design & Data Analysis", category: "research" },
+            { name: "Epidemiology of Parasitic Diseases", category: "research" },
+            { name: "Interdisciplinary Collaboration", category: "teaching" },
+            { name: "Biochemistry & Biotechnology", category: "biotech" },
+            { name: "Bio-Nanoparticle Synthesis", category: "biotech" },
+            { name: "Research Grant Writing", category: "teaching" },
+            { name: "Academic Leadership", category: "teaching" },
+            { name: "AI Applications in Research", category: "biotech" }
+        ];
+
+        const experienceData = [
+            {
+                role: "Professor of Parasitology",
+                period: "Jul 2021 - Present",
+                institution: "Zagazig University, Egypt",
+                institutionTag: "zagazig",
+                location: "Faculty of Veterinary Medicine",
+                highlights: [
+                    "Design and deliver advanced courses in parasitology focusing on biology, diagnosis, treatment, and prevention in domestic and wild animals.",
+                    "Lead and supervise graduate students (MSc & PhD) in novel molecular diagnostic techniques and parasite epidemiology.",
+                    "Conduct cutting-edge research published in peer-reviewed journals, spearheading interdisciplinary parasitic disease control strategies.",
+                    "Organize and lead scientific conferences, workshops, and international community engagements."
+                ]
+            },
+            {
+                role: "Assistant Professor of Parasitology",
+                period: "Oct 2017 - May 2022",
+                institution: "Zagazig University, Egypt",
+                institutionTag: "zagazig",
+                location: "Faculty of Veterinary Medicine",
+                highlights: [
+                    "Incorporated clinical practices and current research into parasitology curricula for comprehensive student mastery.",
+                    "Directed research on veterinary parasite pathogenesis, vector dynamics, and innovative diagnostic assays.",
+                    "Mentored postgraduate students through research design, data analysis, and manuscript preparation.",
+                    "Served active roles on academic quality assurance, program accreditation, and departmental strategic committees."
+                ]
+            },
+            {
+                role: "Associate Professor of Parasitology",
+                period: "Dec 2017 - Aug 2021",
+                institution: "King Saud University",
+                institutionTag: "ksu",
+                location: "Riyadh, Saudi Arabia",
+                highlights: [
+                    "Developed specialized coursework on advanced diagnostics, therapeutic strategies, and parasite epidemiology in Saudi Arabia.",
+                    "Pioneered research into novel bio-nanoparticle therapeutics and molecular characterization of regional parasitic strains.",
+                    "Mentored graduate candidates from proposal design through to high-impact international publication.",
+                    "Secured competitive research grant funding and fostered interdisciplinary university partnerships."
+                ]
+            },
+            {
+                role: "Assistant Professor of Parasitology",
+                period: "2013 - 2017",
+                institution: "King Saud University",
+                institutionTag: "ksu",
+                location: "Riyadh, Saudi Arabia",
+                highlights: [
+                    "Integrated parasitology with clinical veterinary sciences, addressing zoonotic infections in camel and livestock populations.",
+                    "Established and managed specialized molecular research laboratories, formulating regional monitoring protocols.",
+                    "Coordinated joint research initiatives with government health bodies and NGOs for parasitic outbreak management.",
+                    "Contributed to distance learning e-education initiatives expanding parasitology training across the Middle East."
+                ]
+            },
+            {
+                role: "Lecturer of Parasitology",
+                period: "Mar 2008 - Apr 2017",
+                institution: "Zagazig University, Egypt",
+                institutionTag: "zagazig",
+                location: "Faculty of Veterinary Medicine",
+                highlights: [
+                    "Delivered foundational and advanced lectures on parasite biology, pathogenesis, and clinical management.",
+                    "Integrated interactive case studies and practical laboratory diagnostics into undergraduate instruction."
+                ]
+            },
+            {
+                role: "Assistant Lecturer of Parasitology",
+                period: "Nov 2003 - Mar 2008",
+                institution: "Zagazig University, Egypt",
+                institutionTag: "zagazig",
+                location: "Faculty of Veterinary Medicine",
+                highlights: [
+                    "Conducted practical diagnostic lab sessions and supported departmental research projects."
+                ]
+            },
+            {
+                role: "Demonstrator of Parasitology",
+                period: "2000 - 2003",
+                institution: "Zagazig University, Egypt",
+                institutionTag: "zagazig",
+                location: "Faculty of Veterinary Medicine",
+                highlights: [
+                    "Assisted in practical laboratory instruction and field specimen collection."
+                ]
+            }
+        ];
+
+        const thesesData = [
+            {
+                level: "phd",
+                title: "Morphological and Molecular Characterization of Parasites Infecting the Blood of the Arabian Camel (Camelus dromedarius) in Riyadh and Eastern Regions, Saudi Arabia",
+                host: "Arabian Camel (Camelus dromedarius)",
+                methodology: "Morphological & Molecular Diagnostics (COX1, Sequencing)",
+                region: "Riyadh & Eastern Regions, Saudi Arabia"
+            },
+            {
+                level: "msc",
+                title: "Antiparasitic Effects of Allium sativum on Schistosoma mansoni in Female Balb/c Mice",
+                host: "Balb/c Mice",
+                methodology: "Experimental Parasitology & Herbal Extracts (Garlic)",
+                region: "Saudi Arabia / Egypt"
+            },
+            {
+                level: "msc",
+                title: "Therapeutic Efficacy of Propolis (Bee Glue) in Controlling Common Mites in Naturally Infested Rabbits",
+                host: "Rabbits",
+                methodology: "In Vivo Efficacy & Clinical Parasitology",
+                region: "Saudi Arabia / Egypt"
+            },
+            {
+                level: "msc",
+                title: "Molecular Characterization of Hydatid Cysts Isolated from Naturally Infected Camels and Sheep",
+                host: "Camels & Sheep",
+                methodology: "Molecular Genotyping & PCR Characterization",
+                region: "Saudi Arabia"
+            },
+            {
+                level: "msc",
+                title: "Morphological and Molecular Characterization of Sarcocystis spp. Isolated from Naturally Infected Sheep and Goats Using the Mitochondrial COX1 Gene",
+                host: "Sheep & Goats",
+                methodology: "Mitochondrial COX1 Sequencing & Microscopy",
+                region: "Saudi Arabia"
+            },
+            {
+                level: "msc",
+                title: "Morphological and Molecular Characterization of Sarcocystis and Eimeria Species Isolated from Naturally Infected Camels in Saudi Arabia",
+                host: "Camels",
+                methodology: "Microscopy, PCR & Species Identification",
+                region: "Saudi Arabia"
+            },
+            {
+                level: "msc",
+                title: "Molecular Identification of Hymenolepis nana in Mice and Rats Based on COX1 Gene in Selected Regions of Saudi Arabia",
+                host: "Mice & Rats",
+                methodology: "Mitochondrial COX1 Gene Identification",
+                region: "Saudi Arabia"
+            },
+            {
+                level: "msc",
+                title: "Efficacy of Eugenia caryophyllata Against Haemoproteus columbae in Domestic Pigeons (Columba livia domestica)",
+                host: "Domestic Pigeons",
+                methodology: "Natural Product Antiparasitic Assay (Clove Extract)",
+                region: "Saudi Arabia"
+            },
+            {
+                level: "msc",
+                title: "Prevalence and Molecular Identification of Nasal Myiasis-Causing Larvae in Sheep and Goats in Riyadh, Saudi Arabia",
+                host: "Sheep & Goats",
+                methodology: "Epidemiological Survey & Molecular Identification",
+                region: "Riyadh, Saudi Arabia"
+            }
+        ];
+
+        const publicationsData = [
+            {
+                authors: "Abdel-Razek, N., Khalil, R. H., Afifi, A. A. M., Alkhuriji, A. F., & Metwally, D. M.",
+                year: "2024",
+                title: "Nutritional Innovation Using Green Seaweed (Ulva sp.) and Garlic Powder Extracts for White-Leg Shrimp (Litopenaeus vannamei) Challenged by Vibrio harveyi",
+                journal: "Veterinary Medicine and Science, 2024-11",
+                doi: "https://doi.org/10.1002/vms3.70052"
+            },
+            {
+                authors: "Alkuriji, M. A., Kassar, H. K., Alajmi, R. A., Al-Turaiki, I. M., Alorf, M. S., Al Malahi, N. M., ... & Metwally, D. M.",
+                year: "2023",
+                title: "Phylogenetic and morphological determination of Wohlfahrtia magnifica (Schiner) (Diptera: Sarcophagidae), the myiasis flesh fly, in Riyadh, Saudi Arabia",
+                journal: "International Journal of Tropical Insect Science, 43(5), 1821-1830",
+                doi: "https://link.springer.com"
+            },
+            {
+                authors: "Metwally, Dina M., Afrah F. Alkhuriji, Ibrahim A. H. Barakat, Hanadi B. Baghdadi, Manal F. El-Khadragy, Wafa Abdullah I. Al-Megrin, Abdullah D. Alanazi, and Fatemah E. Alajmi.",
+                year: "2022",
+                title: "Protective Effect of Litchi chinensis Peel Extract-Prepared Nanoparticles on Rabbits Experimentally Infected with Eimeria stiedae",
+                journal: "Animals 12, no. 22: 3098",
+                doi: "https://doi.org/10.3390/ani12223098"
+            },
+            {
+                authors: "Alobaid, H. M., Daghestani, M. H., AL-Malahi, N. M., Alzahrani, S. A., Hassen, L. M., & Metwally, D. M.",
+                year: "2022",
+                title: "Exploring the effect of silver nanoparticles on gene expression in colon cancer cell line HCT116",
+                journal: "Green Processing and Synthesis, 11(1), 1108-1117",
+                doi: "https://doi.org"
+            },
+            {
+                authors: "Noura J Alotaibi, Isra M Al-Turaiki, Reem Alajmi, Boulkenafet Fouzi, Muhammad Amjad Bashir, Zainab Almusawi, Dina M Metwally, Mais A Alzarzor Alajami, Fatemah E Alajmi, Mohamed G Nasser",
+                year: "2022",
+                title: "Molecular Identification of Newly Recorded Louse Columbicola tschulyschman Eichler (Phthiraptera: Philopteridae) From Saudi Arabia With a Note on Genus Columbicola spp. Phylogeny",
+                journal: "Journal of Medical Entomology, Vol 59, Issue 6, Pages 1980-1985",
+                doi: "https://doi.org/10.1093/jme/tjac136"
+            }
+        ];
+
+        const committeesData = [
+            { role: "Rapporteur, E-Education Committee", period: "2020-2021", org: "King Saud University" },
+            { role: "E-Learning Committee Appointed Member", period: "2020-2021", org: "King Saud University" },
+            { role: "Exams Committee Rapporteur", period: "Second Term 2021", org: "King Saud University" },
+            { role: "ISO Committee Member", period: "2019-2021", org: "King Saud University" },
+            { role: "Graduate Studies and Research Committee", period: "2020", org: "King Saud University" },
+            { role: "Research Project Study Committee", period: "KSU Member", org: "King Saud University" },
+            { role: "Study Plans & Learning Resources Committee", period: "2019", org: "King Saud University" },
+            { role: "Laboratories, Hardware & Services Committee", period: "2017", org: "King Saud University" },
+            { role: "Rapporteur, Inventory Committee", period: "2017", org: "King Saud University" }
+        ];
+
+        const trainingKsu = [
+            "Competitive Research Program of Projects",
+            "Credit Hours Program",
+            "Effective Presentation Program",
+            "ICDL Computer Program",
+            "Program of Scientific Publishing",
+            "Examination Systems and Student Evaluation",
+            "The Use of Technology in Teaching",
+            "Mixed Research, Deanship of Skills Development (2020)",
+            "Micro-Teaching, Deanship of Skills Development (2020)",
+            "Electronic Tests in Blackboard Learning System (2020)",
+            "Scientific Supervision of Graduate Students (2020)",
+            "Interactive Electronic Books Course (Feb 2020)",
+            "Publication in International Periodicals (Oct 2015)",
+            "Search in Databases and Digital Libraries (Sep 2014)"
+        ];
+
+        const trainingZagazig = [
+            "Teaching Traditions Training Course (Aug 2021)",
+            "Preparing Competitive Projects for Research Finance (Jun 2021)",
+            "E-Learning Training (Jan 2021)",
+            "Financial and Legal Aspects in University Business (Oct 2020)",
+            "Time Management and Meetings (Oct 2020)",
+            "Scientific and Reference Management (Oct 2020)",
+            "Self-Evaluation of Higher Education Institutions (Aug 2015)",
+            "Effective Display Program (Aug 2015)",
+            "Examinations Systems and Student Evaluation (Jul 2015)",
+            "Time Management & Meetings Program (Jul 2015)"
+        ];
+
+        // Render Skills
+        function renderSkills(filter = 'all') {
+            const container = document.getElementById('skillsGrid');
+            container.innerHTML = '';
+            skillsData.forEach(skill => {
+                if (filter === 'all' || skill.category === filter) {
+                    const card = document.createElement('div');
+                    card.className = "p-3 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-emerald-500/40 text-xs text-slate-200 font-medium flex items-center gap-2 transition-all";
+                    card.innerHTML = `<i class="fa-solid fa-microscope text-emerald-400"></i> <span>${skill.name}</span>`;
+                    container.appendChild(card);
+                }
+            });
+        }
+
+        function filterSkills(cat) {
+            document.querySelectorAll('#skillsFilterContainer button').forEach(btn => {
+                if (btn.getAttribute('data-category') === cat) {
+                    btn.className = "skill-tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white transition-all";
+                } else {
+                    btn.className = "skill-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all";
+                }
+            });
+            renderSkills(cat);
+        }
+
+        // Render Experience
+        function renderExperience(filter = 'all') {
+            const container = document.getElementById('experienceTimeline');
+            container.innerHTML = '';
+
+            experienceData.forEach(item => {
+                if (filter === 'all' || item.institutionTag === filter) {
+                    const bulletPoints = item.highlights.map(h => `<li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-emerald-400 mt-1"></i><span>${h}</span></li>`).join('');
+                    
+                    const el = document.createElement('div');
+                    el.className = "relative pl-6 sm:pl-8 group print-break-inside-prevent";
+                    el.innerHTML = `
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-emerald-500 group-hover:bg-emerald-500 transition-colors"></div>
+                        <div class="glass-panel p-5 sm:p-6 rounded-2xl border border-slate-800/80 hover:border-emerald-500/30 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-100">${item.role}</h3>
+                                    <span class="text-xs font-semibold text-emerald-400">${item.institution}</span>
+                                    <span class="text-xs text-slate-400 block sm:inline sm:ml-2">• ${item.location}</span>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-medium border border-slate-700 self-start sm:self-auto">${item.period}</span>
+                            </div>
+                            <ul class="mt-3 space-y-1.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                ${bulletPoints}
+                            </ul>
+                        </div>
+                    `;
+                    container.appendChild(el);
+                }
+            });
+        }
+
+        function filterExperience(tag) {
+            document.querySelectorAll('#expFilterContainer button').forEach(btn => {
+                if (btn.getAttribute('onclick').includes(tag)) {
+                    btn.className = "exp-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white transition-all";
+                } else {
+                    btn.className = "exp-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all";
+                }
+            });
+            renderExperience(tag);
+        }
+
+        let currentThesisLevel = 'all';
+
+        function renderTheses() {
+            const container = document.getElementById('thesesGrid');
+            const searchVal = document.getElementById('thesisSearchInput').value.toLowerCase();
+            container.innerHTML = '';
+
+            thesesData.forEach(item => {
+                const matchesLevel = currentThesisLevel === 'all' || item.level === currentThesisLevel;
+                const matchesSearch = item.title.toLowerCase().includes(searchVal) ||
+                                      item.host.toLowerCase().includes(searchVal) ||
+                                      item.methodology.toLowerCase().includes(searchVal);
+
+                if (matchesLevel && matchesSearch) {
+                    const badgeClass = item.level === 'phd' 
+                        ? 'bg-purple-500/10 text-purple-400 border-purple-500/20' 
+                        : 'bg-blue-500/10 text-blue-400 border-blue-500/20';
+
+                    const card = document.createElement('div');
+                    card.className = "glass-panel p-5 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-emerald-500/40 transition-all print-break-inside-prevent";
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded border ${badgeClass} uppercase">
+                                    ${item.level === 'phd' ? 'Ph.D. Supervision' : "Master's Thesis"}
+                                </span>
+                                <span class="text-xs text-slate-400"><i class="fa-solid fa-location-dot text-emerald-400"></i> ${item.region}</span>
+                            </div>
+                            <h3 class="text-sm font-bold text-slate-100 leading-snug mb-3">${item.title}</h3>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 space-y-1 text-xs text-slate-400">
+                            <div class="flex justify-between">
+                                <span>Host / Species:</span>
+                                <span class="font-medium text-slate-200">${item.host}</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Focus:</span>
+                                <span class="font-medium text-emerald-400 truncate max-w-[200px]" title="${item.methodology}">${item.methodology}</span>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                }
+            });
+        }
+
+        function filterThesisLevel(lvl) {
+            currentThesisLevel = lvl;
+            document.querySelectorAll('.thesis-level-btn').forEach(btn => {
+                if (btn.getAttribute('onclick').includes(lvl)) {
+                    btn.className = "thesis-level-btn active flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white";
+                } else {
+                    btn.className = "thesis-level-btn flex-1 sm:flex-none px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700";
+                }
+            });
+            renderTheses();
+        }
+
+        function filterTheses() {
+            renderTheses();
+        }
+
+        function renderPublications() {
+            const container = document.getElementById('publicationsContainer');
+            container.innerHTML = '';
+
+            publicationsData.forEach((pub, index) => {
+                const card = document.createElement('div');
+                card.className = "glass-panel p-5 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover:border-emerald-500/40 transition-all print-break-inside-prevent";
+                card.innerHTML = `
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-bold">${pub.year}</span>
+                            <span class="text-xs text-slate-400 font-medium">${pub.journal}</span>
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-100 leading-snug">${pub.title}</h3>
+                        <p class="text-xs text-slate-400">${pub.authors}</p>
+                    </div>
+                    <div class="flex items-center gap-2 self-end sm:self-auto no-print">
+                        <button onclick="copyCitation(${index})" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded-lg border border-slate-700 flex items-center gap-1.5 transition-all">
+                            <i class="fa-regular fa-copy"></i> Copy
+                        </button>
+                        <a href="${pub.doi}" target="_blank" rel="noopener" class="px-3 py-1.5 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 text-xs font-semibold rounded-lg border border-emerald-500/30 flex items-center gap-1.5 transition-all">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Link
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function copyCitation(index) {
+            const pub = publicationsData[index];
+            const text = `${pub.authors} (${pub.year}). ${pub.title}. ${pub.journal}. ${pub.doi}`;
+            
+            // Clipboard fallback as specified in instructions
+            const tempInput = document.createElement("textarea");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            showToast("Citation copied to clipboard!");
+        }
+
+        function renderCommittees() {
+            const container = document.getElementById('committeesGrid');
+            container.innerHTML = '';
+
+            committeesData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-xs flex justify-between items-center";
+                card.innerHTML = `
+                    <div>
+                        <span class="font-bold text-slate-200 block">${item.role}</span>
+                        <span class="text-slate-500 text-[11px]">${item.org}</span>
+                    </div>
+                    <span class="px-2 py-0.5 bg-slate-800 text-emerald-400 rounded text-[10px] font-semibold">${item.period}</span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        let currentTraining = 'ksu';
+        function renderTraining() {
+            const container = document.getElementById('trainingContainer');
+            const list = currentTraining === 'ksu' ? trainingKsu : trainingZagazig;
+            
+            container.innerHTML = `
+                <div class="mb-3 text-xs font-bold text-emerald-400 uppercase tracking-wider">
+                    ${currentTraining === 'ksu' ? 'King Saud University Programs' : 'Zagazig University Training'}
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    ${list.map(t => `<div class="text-xs text-slate-300 flex items-center gap-2"><i class="fa-solid fa-check-circle text-emerald-500 text-[10px]"></i><span>${t}</span></div>`).join('')}
+                </div>
+            `;
+        }
+
+        function toggleTrainingView(univ) {
+            currentTraining = univ;
+            document.getElementById('btnTrainKsu').className = univ === 'ksu' ? "px-2.5 py-1 rounded bg-emerald-600 text-white font-medium" : "px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium";
+            document.getElementById('btnTrainZag').className = univ === 'zagazig' ? "px-2.5 py-1 rounded bg-emerald-600 text-white font-medium" : "px-2.5 py-1 rounded bg-slate-800 text-slate-300 font-medium";
+            renderTraining();
+        }
+
+        function toggleGlobalSearchModal() {
+            const modal = document.getElementById('searchModal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.getElementById('globalSearchInput').focus();
+            }
+        }
+
+        // Close search on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('searchModal');
+                if (!modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                }
+            }
+        });
+
+        function handleGlobalSearch() {
+            const query = document.getElementById('globalSearchInput').value.toLowerCase().trim();
+            const container = document.getElementById('searchResultsContainer');
+
+            if (query.length < 2) {
+                container.innerHTML = '<p class="text-slate-500 text-center py-8">Start typing to search across research topics, publications, patents and career history...</p>';
+                return;
+            }
+
+            let results = [];
+
+            // Search Patents
+            if ("guava seed grape mangosteen nanoparticles patent".includes(query)) {
+                results.push({ section: "Patents", title: "US Patents on Guava, Grape & Mangosteen Nanoparticles", link: "#patents" });
+            }
+
+            // Search Theses
+            thesesData.forEach(t => {
+                if (t.title.toLowerCase().includes(query) || t.host.toLowerCase().includes(query) || t.methodology.toLowerCase().includes(query)) {
+                    results.push({ section: "Theses Supervision", title: t.title, link: "#supervision" });
+                }
+            });
+
+            // Search Publications
+            publicationsData.forEach(p => {
+                if (p.title.toLowerCase().includes(query) || p.authors.toLowerCase().includes(query) || p.journal.toLowerCase().includes(query)) {
+                    results.push({ section: "Publications", title: p.title, link: "#publications" });
+                }
+            });
+
+            // Search Experience
+            experienceData.forEach(e => {
+                if (e.role.toLowerCase().includes(query) || e.institution.toLowerCase().includes(query)) {
+                    results.push({ section: "Experience", title: `${e.role} at ${e.institution}`, link: "#experience" });
+                }
+            });
+
+            if (results.length === 0) {
+                container.innerHTML = `<p class="text-slate-400 text-center py-6">No matching records found for "<span class="text-emerald-400">${query}</span>".</p>`;
+            } else {
+                container.innerHTML = results.map(r => `
+                    <a href="${r.link}" onclick="toggleGlobalSearchModal()" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 transition-all">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 block">${r.section}</span>
+                        <span class="text-xs font-semibold text-slate-200 block truncate">${r.title}</span>
+                    </a>
+                `).join('');
+            }
+        }
+
+        // Theme Toggle
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.className = "fa-solid fa-sun text-lg";
+            } else {
+                html.classList.add('dark');
+                icon.className = "fa-solid fa-moon text-lg";
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Toast Notification
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+
+        window.onload = function() {
+            renderSkills('all');
+            renderExperience('all');
+            renderTheses();
+            renderPublications();
+            renderCommittees();
+            renderTraining();
+        };
+    </script>
+</body>
+</html>
